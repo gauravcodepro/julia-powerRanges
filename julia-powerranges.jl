@@ -2,7 +2,7 @@
 # Author Gaurav
 # Universitat Potsdam
 # Date 2026-6-30
-
+# total time take in writing code - 40 minutes.
 # a faster GTF annotation linker by implmenting the recursive hash split instead of the nested contaminated list algorithm
 # list stores and uses more memory than the recurisve iteration.
 function powerGTF(gtfannotationfile)
