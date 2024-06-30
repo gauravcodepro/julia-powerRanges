@@ -9,7 +9,8 @@
 - You can easily add the junction reads and the reads spanning across the cross junctions. if you want to do then you might use
 ```
   Union{String, Float16, Int8} as a type declaration and push the ids to the same.
-  # take the one id as a forward pointer and then the cross match. 
+  # take the one id as a forward pointer and then the cross match.
+- to use this powerrange. 
 ```
 include julia-powerranges.jl
 ```
