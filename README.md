@@ -1,4 +1,4 @@
-# julia-powerRanges
+# julia-powerranges
 
 - julia implementation of the recursive hash split instead of the nested list as in Geo Pertea as list takes and stores more memory.
 - original powerRanges from Geo Pertea are here https://github.com/gpertea/PowerRangesR
