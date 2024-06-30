@@ -31,7 +31,7 @@ function powerGTF(gtfannotationfile)
     @assert length(geneLocus) == length(geneName) == length(geneStart) == length(geneEnd) == length(geneScore) \
                                      == length(geneStrand) == length(genePhase) == length(geneID) == length(geneName)
     for i in 1:length(geneLocus)
-      write("gffPower, geneLocus[i], "\t", geneName[i], "\t", geneStart[i], geneEnd[i], "\t", geneScore[i],\
+      write("gffPower", geneLocus[i], "\t", geneName[i], "\t", geneStart[i], geneEnd[i], "\t", geneScore[i],\
                                    "\t", geneStrand[i], "\t", genePhase[i], "\t", geneID[i], "\t", geneName[i], "\n")
     end
 end
@@ -64,7 +64,7 @@ function powerexonGTF(gtfannotationfile)
     @assert length(exonLocus) == length(exonName) == length(exonStart) == length(exonEnd) \
                      == length(exonScore) == length(exonStrand) == length(exonPhase) == length(exonID) == length(exonName)
     for i in 1:length(exonLocus)
-      write("gffPowerexon, exonLocus[i], "\t", exonName[i], "\t", exonStart[i], exonEnd[i], "\t", exonScore[i], \
+      write("gffPowerexon", exonLocus[i], "\t", exonName[i], "\t", exonStart[i], exonEnd[i], "\t", exonScore[i], \
                              "\t", exonStrand[i], "\t", exonPhase[i], "\t", geneID[i], "\t", transcriptID, "\t", geneName[i], "\n")
     end
 end
@@ -97,7 +97,7 @@ function powerCDSGTF(gtfannotationfile)
     @assert length(cdsLocus) == length(cdsName) == length(cdsStart) == length(cdsEnd) == length(cdsScore) \
                                               == length(cdsStrand) == length(cdsPhase) == length(cdsID) == length(cdsName)
     for i in 1:length(cdsLocus)
-      write("gffPowerCDS, cdsLocus[i], "\t", cdsName[i], "\t", cdsStart[i], cdsEnd[i], "\t", cdsScore[i], \
+      write("gffPowerCDS", cdsLocus[i], "\t", cdsName[i], "\t", cdsStart[i], cdsEnd[i], "\t", cdsScore[i], \
                                   "\t", cdsStrand[i], "\t", cdsPhase[i], "\t", geneID[i], "\t", transcriptID, "\t", geneName[i], "\n")
     end
 end
@@ -131,7 +131,7 @@ function powerUTRGTF(gtfannotationfile)
     @assert length(UTRLocus) == length(UTRName) == length(UTRStart) == length(UTREnd) == length(UTRScore) \
                                        == length(UTRStrand) == length(UTRPhase) == length(UTRID) == length(UTRName)
     for i in 1:length(UTRLocus)
-      write("gffPowerUTR, UTRLocus[i], "\t", UTRName[i], "\t", UTRStart[i], UTREnd[i], "\t", UTRScore[i], \
+      write("gffPowerUTR", UTRLocus[i], "\t", UTRName[i], "\t", UTRStart[i], UTREnd[i], "\t", UTRScore[i], \
                                       "\t", UTRStrand[i], "\t", UTRPhase[i], "\t", UTRID[i], "\t", transcriptID, "\t", geneName[i], "\n")
     end
 end
