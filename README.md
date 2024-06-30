@@ -5,7 +5,7 @@
 - i coded using the recursive split so that it becomes even faster and a linked Dict{String, String}() type declaration for linking the gene to transcript.
 - total time take in writing code - 40 minutes.
 - samples files are the same used in Geo Pertea GTF GENCODE [Gencode](https://www.gencodegenes.org/human/release_43lift37.html)
-- entire human genome annotation in less than 5 minutes parsed.
+- entire human genome annotation parsed in less than 5 minutes.
 
 ```
 include julia-powerranges.jl
