@@ -33,6 +33,8 @@ function powerGTF(gtfannotationfile)
     for i in 1:length(geneLocus)
       write("gffPower, geneLocus[i], "\t", geneName[i], "\t", geneStart[i], geneEnd[i], "\t", geneScore[i],\
                                    "\t", geneStrand[i], "\t", genePhase[i], "\t", geneID[i], "\t", geneName[i], "\n")
+    end
+end
 
 function powerexonGTF(gtfannotationfile)
     exonLocus = String[]
@@ -64,8 +66,9 @@ function powerexonGTF(gtfannotationfile)
     for i in 1:length(exonLocus)
       write("gffPowerexon, exonLocus[i], "\t", exonName[i], "\t", exonStart[i], exonEnd[i], "\t", exonScore[i], \
                              "\t", exonStrand[i], "\t", exonPhase[i], "\t", geneID[i], "\t", transcriptID, "\t", geneName[i], "\n")
-
-
+    end
+end
+        
 function powerCDSGTF(gtfannotationfile)
     cdsLocus = String[]
     cdsName = String[]
@@ -96,7 +99,10 @@ function powerCDSGTF(gtfannotationfile)
     for i in 1:length(cdsLocus)
       write("gffPowerCDS, cdsLocus[i], "\t", cdsName[i], "\t", cdsStart[i], cdsEnd[i], "\t", cdsScore[i], \
                                   "\t", cdsStrand[i], "\t", cdsPhase[i], "\t", geneID[i], "\t", transcriptID, "\t", geneName[i], "\n")
+    end
+end
 
+        
 function powerUTRGTF(gtfannotationfile)
     UTRLocus = String[]
     UTRName = String[]
@@ -127,9 +133,14 @@ function powerUTRGTF(gtfannotationfile)
     for i in 1:length(UTRLocus)
       write("gffPowerUTR, UTRLocus[i], "\t", UTRName[i], "\t", UTRStart[i], UTREnd[i], "\t", UTRScore[i], \
                                       "\t", UTRStrand[i], "\t", UTRPhase[i], "\t", UTRID[i], "\t", transcriptID, "\t", geneName[i], "\n")
-
+    end
+end
+        
 function linkgeneTranscript(gtfannotationfile)
   geneTranscriptID = Dict(String, String)()
   for i in readlines(gtfannotationfile)
     if split(line, r";|\t|\"")[3] == "UTR"
       geneTranscriptID[split(line, r";|\t|\"")[10]] = split(line, r";|\t|\"")[13]
+    end
+end
+end
