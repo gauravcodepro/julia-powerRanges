@@ -10,11 +10,11 @@ function powerGTF(gtfannotationfile)
     geneName = String[]
     geneStart = String[]
     geneEnd = String[]
-    geneScore = []
-    geneStrand = []
-    genePhase = []
-    geneID = []
-    geneName = []
+    geneScore = String[]
+    geneStrand = String[]
+    genePhase = String[]
+    geneID = String[]
+    geneName = String[]
     for i in readlines(gtfannotationfile)
       if split(line, r";|\t|\"")[3] == "gene"
         push!(geneLocus, split(line, r";|\t|\"")[1])
@@ -39,12 +39,12 @@ function powerexonGTF(gtfannotationfile)
     exonName = String[]
     exonStart = String[]
     exonEnd = String[]
-    exonScore = []
-    exonStrand = []
-    exonPhase = []
-    geneID = []
-    transcriptID = []
-    geneName = []
+    exonScore = String[]
+    exonStrand = String[]
+    exonPhase = String[]
+    geneID = String[]
+    transcriptID = String[]
+    geneName = String[]
     for i in readlines(gtfannotationfile)
       if split(line, r";|\t|\"")[3] == "exon"
         push!(exonLocus, split(line, r";|\t|\"")[1])
@@ -71,12 +71,12 @@ function powerCDSGTF(gtfannotationfile)
     cdsName = String[]
     cdsStart = String[]
     cdsEnd = String[]
-    cdsScore = []
-    cdsStrand = []
-    cdsPhase = []
-    geneID = []
-    transcriptID = []
-    geneName = []
+    cdsScore = String[]
+    cdsStrand = String[]
+    cdsPhase = String[]
+    geneID = String[]
+    transcriptID = String[]
+    geneName = String[]
     for i in readlines(gtfannotationfile)
       if split(line, r";|\t|\"")[3] == "CDS"
         push!(cdsLocus, split(line, r";|\t|\"")[1])
@@ -102,12 +102,12 @@ function powerUTRGTF(gtfannotationfile)
     UTRName = String[]
     UTRStart = String[]
     UTREnd = String[]
-    UTRScore = []
-    UTRStrand = []
-    UTRPhase = []
-    geneID = []
-    transcriptID = []
-    geneName = []
+    UTRScore = String[]
+    UTRStrand = String[]
+    UTRPhase = String[]
+    geneID = String[]
+    transcriptID = String[]
+    geneName = String[]
     for i in readlines(gtfannotationfile)
       if split(line, r";|\t|\"")[3] == "UTR"
         push!(UTRLocus, split(line, r";|\t|\"")[1])
