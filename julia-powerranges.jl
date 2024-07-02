@@ -180,12 +180,12 @@ function visualGTF(gtfannotationfile, gene, exon, cds, UTR)
         push!(genelength, parse(Int64, geneEnd[i]) - parse(Int64, geneStart[i]))
     end 
     for i in 1:length(exonStart)
-        push!(exonlength, parse(Int64, geneEnd[i]) - parse(Int64, geneStart[i]))
+        push!(exonlength, parse(Int64, exonEnd[i]) - parse(Int64, exonStart[i]))
     end
     for i in 1:length(cdsStart)
-        push!(cdslength, parse(Int64, geneEnd[i]) - parse(Int64, geneStart[i]))
+        push!(cdslength, parse(Int64, cdsEnd[i]) - parse(Int64, cdsStart[i]))
     end
     for i in 1:length(UTRStart)
-        push!(UTRlength, parse(Int64, geneEnd[i]) - parse(Int64, geneStart[i]))
+        push!(UTRlength, parse(Int64, UTREnd[i]) - parse(Int64, UTRStart[i]))
     end
 end 
