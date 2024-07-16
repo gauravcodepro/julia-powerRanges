@@ -1,4 +1,4 @@
-# julia-powerranges
+# powerranges.jl
 
 <div align = "justify">
   
